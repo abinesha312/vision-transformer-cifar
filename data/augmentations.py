@@ -8,7 +8,7 @@ class AutoAugment:
         self.aug = Compose([
             HorizontalFlip(p=0.5),
             ShiftScaleRotate(shift_limit=0.1, scale_limit=0.1, rotate_limit=15),
-            CoarseDropout(max_holes=1, max_height=16, max_width=16, fill_value=0.5)
+            CoarseDropout(max_holes=8, max_height=8, max_width=8)
         ])
 
     def __call__(self, img):

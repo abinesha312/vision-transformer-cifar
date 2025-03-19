@@ -2,28 +2,25 @@ model:
   image_size: 32
   patch_size: 4
   num_classes: 10
-  dim: 192 # Reduced from 256 for CPU
+  dim: 256
   depth: 6
-  heads: 6 # Reduced from 8 for CPU
-  mlp_dim: 384 # Reduced from 512 for CPU
+  heads: 8
+  mlp_dim: 512
   dropout: 0.1
   sd_prob: 0.2
-
 data:
-  batch_size: 32
+  batch_size: 128
   augment: true
   num_workers: 4
-
 training:
-  max_epochs: 5
-  precision: 32
-  accelerator: cpu
-  devices: 1 # Changed from 0 to 1
+  max_epochs: 200
+  precision: 16
+  accelerator: gpu
+  devices: 1
   gradient_clip_val: 1.0
   lr: 0.0003
   weight_decay: 0.05
   label_smoothing: 0.1
-
 logging:
   project: vision-transformer-cifar
-  name: vit-base-cpu
+  name: vit-base-experiment
