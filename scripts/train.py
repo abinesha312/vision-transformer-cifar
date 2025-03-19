@@ -326,7 +326,7 @@ def train_model(model, trainloader, testloader, num_epochs=100, warmup_epochs=5)
     plt.title('Validation Accuracy')
     plt.xlabel('Epoch')
     plt.ylabel('Accuracy (%)')
-    plt.savefig('visualizations/training_curves.png')
+    plt.savefig('Results/training_curves.png')
     
     return model, train_losses, val_accuracies
 
@@ -334,7 +334,7 @@ def train_model(model, trainloader, testloader, num_epochs=100, warmup_epochs=5)
 def main():
     # Create directories
     os.makedirs('checkpoints', exist_ok=True)
-    os.makedirs('visualizations', exist_ok=True)
+    os.makedirs('Results', exist_ok=True)
     
     # Set seed for reproducibility
     torch.manual_seed(42)
@@ -492,9 +492,9 @@ if __name__ == "__main__":
 #     criterion = torch.nn.CrossEntropyLoss()
 #     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
     
-#     # Create folders for checkpoints and visualizations
+#     # Create folders for checkpoints and Results
 #     os.makedirs('checkpoints', exist_ok=True)
-#     os.makedirs('visualizations', exist_ok=True)
+#     os.makedirs('Results', exist_ok=True)
     
 #     # Training and validation metrics
 #     best_acc = 0.0
@@ -589,7 +589,7 @@ if __name__ == "__main__":
 #     plt.ylabel('Accuracy (%)')
     
 #     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-#     plt.savefig(f'visualizations/training_curves_{timestamp}.png')
+#     plt.savefig(f'Results/training_curves_{timestamp}.png')
     
 #     # Final model save
 #     torch.save({
@@ -602,7 +602,7 @@ if __name__ == "__main__":
 #     print(f"Best validation accuracy: {best_acc:.2f}%")
 #     print(f"Final validation accuracy: {val_accs[-1]:.2f}%")
 #     print(f"Models saved in ./checkpoints/")
-#     print(f"Training curves saved in ./visualizations/")
+#     print(f"Training curves saved in ./Results/")
     
 #     return model
 

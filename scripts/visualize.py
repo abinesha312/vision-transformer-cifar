@@ -175,8 +175,8 @@ def visualize_attention(model, image, class_name):
             ax2.axis('off')
             
             # Save visualization
-            os.makedirs('visualizations', exist_ok=True)
-            plt.savefig(f'visualizations/attention_{class_name}.png')
+            os.makedirs('Results', exist_ok=True)
+            plt.savefig(f'Results/attention_{class_name}.png')
             plt.close()
             
             # Print prediction results
