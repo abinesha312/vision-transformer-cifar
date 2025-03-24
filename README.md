@@ -57,6 +57,10 @@ Uses CLS token output for final predictions
 - `visualize.py`: Generates attention map visualizations.
 - `attention_analysis.ipynb`: Provides in-depth model interpretation.
 
+Here's an example of an attention map visualization:
+
+![Attention Map Example](Results/training_curves.png)
+
 ### 5\. Deployment
 
 - `Dockerfile`: Supports containerized deployment.
@@ -64,37 +68,15 @@ Uses CLS token output for final predictions
 
 ## Model Configuration
 
-Parameter
-
-Description
-
-Image Size
-
-Defines input image dimensions
-
-Patch Size
-
-Determines the size of input patches
-
-Model Dimensions
-
-Controls transformer layer dimensions
-
-Transformer Layers
-
-Number of transformer blocks
-
-Attention Heads
-
-Number of attention heads per block
-
-Dropout Rate
-
-Probability of dropping activations
-
-Stochastic Depth
-
-Used for regularization
+| Parameter          | Description                           |
+| :----------------- | :------------------------------------ |
+| Image Size         | Defines input image dimensions        |
+| Patch Size         | Determines the size of input patches  |
+| Model Dimensions   | Controls transformer layer dimensions |
+| Transformer Layers | Number of transformer blocks          |
+| Attention Heads    | Number of attention heads per block   |
+| Dropout Rate       | Probability of dropping activations   |
+| Stochastic Depth   | Used for regularization               |
 
 ## Running the Project
 
